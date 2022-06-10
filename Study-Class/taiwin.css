@@ -1,0 +1,19 @@
+.bg-orange-600{
+    background-color: brown;
+}
+.h-64{
+    height: 256px;
+}
+@media (min-width:640px){
+    .sm\:bg-green-600{
+        background-color: green;
+    }
+    .sm\:h-64{
+        height: 256px;
+    }
+}
+@media (min-width:768px){
+    .md\:bg-red-600{
+        background-color: red;
+    }
+}
