@@ -1,9 +1,10 @@
-import {productList} from './data.js'
+import { render } from "./common";
+import { productList } from "./data";
 
-import { render } from './common.js'
-//Lấy được id trên URL
+// lấy được id trên url
 const id = new URLSearchParams(window.location.search).get("id");
-//Tìm trong mảng, nếu có id nào trùng id trong mảng thì trả về kết quả
+
+// Tim trong mang, neu co id nao trung voi id trong mang thi tra ve ket qua
 console.log("id", id);
 const product = productList.find((item) => item.id == id);
 console.log("product", product);

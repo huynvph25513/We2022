@@ -1,15 +1,16 @@
-import {productList} from './data.js'
+import { render } from "./common";
+import { productList } from "./data";
+// selector đến element product
+// khai báo hàm show product
+function showProducts(products) {
+    // kiểm tra
+    if (!Array.isArray(productList) || productList.length == 0) return [];
 
-import { render } from './common.js'
-//khai báo hàm show product
-function showProduct(products)  {
-    //kiểm tra
-    if(!Array.isArray(productList) || productList.length == 0) return [];
-    //xử lý
-    let result = '';
-    for(let i = 0; i< products.length; i++){
+    // xử lý
+    let result = "";
+    for (let i = 0; i < products.length; i++) {
         const product = products[i];
-        result =  `
+        result += `
         <div class="item">
             <div class="item-image">
                 <img src="${product.img}" alt="">
@@ -24,7 +25,8 @@ function showProduct(products)  {
         </div>
         `;
     }
-    //return
+    // return
     return result;
 }
-render("product", showProduct(products));
+
+render("product", showProducts(productList));
